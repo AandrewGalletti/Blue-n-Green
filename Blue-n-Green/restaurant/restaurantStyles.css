@@ -1,0 +1,60 @@
+/* Andrew Galletti
+Last Edited: 10/6
+Date Created: 9/30 */
+
+noscript div{
+	background-color: black;
+}
+
+body{
+	background-color: rgba(206, 169, 214, 1);
+}
+
+.jumbotron {
+	text-align: center;
+	background-color: #58189c;
+	color: #fef9ff;
+	margin-bottom:0px;
+	margin-top: 0px;
+}
+header {
+	font-family: impact;
+	font-style: italic;
+}
+
+footer {
+	border-top: solid 10px #9c1991;
+}
+
+.nav {
+	border-top: solid 5px #9c1991;
+	border-bottom: solid 10px #9c1991;
+	background-color: #58199c;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	margin-bottom: 12px;
+}
+.nav .btn{
+	background-color: #9c1991;
+	color: #fef9ff;
+	margin-left: 12px;
+}
+.nav .btn:hover {
+	font-weight: bold;
+	color: ;
+}
+.nav .btn:visited {
+	color: yellow;
+}
+.container-fluid {
+	width: 60%; 
+	background-color: #58199c;
+	color: #fef9ff;
+	padding: 20px 35px 0px 35px;
+	border: solid 5px #9c1991;
+	margin-bottom: 12px;
+}
+.container-fluid .img-fluid {
+	border: solid 5px #9c1991;
+	margin-bottom: 30px;
+}

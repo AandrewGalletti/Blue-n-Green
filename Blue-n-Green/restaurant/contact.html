@@ -1,0 +1,143 @@
+<!-- Andrew Galletti
+Last Date Edited: 10/6
+Date Created: 9/30
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit-no">
+		<title>Contact Us</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> 
+		<link rel="stylesheet" href="restaurantStyles.css" type="text/css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script type="text/javascript" src="contactRequestValidation.js"></script>
+		<style>
+			label {
+				text-align: right;
+			}
+			.required {
+				font-weight: bold; 
+			}
+		</style>
+	</head>
+	
+	<body>
+		<noscript>
+			<div style="border: 1px solid purple; padding: 10px">
+				<span style="color:red">JavaScript is not enabled! Please enable JavaScript to best experience this page!</span>
+			</div>
+		</noscript>
+		
+		<header class="jumbotron">
+			<h1>Onion Head Kitchen</h1>
+		</header>
+		
+		<ul class="nav nav-pills">
+			<li><a class="btn" href="home.html"><i class="fa fa-home"></i> Home</a></li>
+			<li><a class="btn" href="menu.html">Menu</a></li>
+			<li class="active"><a class="btn" href="contact.html">Contact</a></li>
+		</ul>
+		
+		<form onsubmit="return false;">
+			<div class="form-group row">
+				<label for="name" class="col-sm-4 col-form-label required">Name:</label>
+				<div class="col-sm-4">
+					<input type="text" class="form-control" id="name">
+				</div>
+			</div>
+		  
+			<div class="form-group row">
+				<label for="email" class="col-sm-4 col-form-label required">Email:</label>
+				<div class="col-sm-4">
+					<input type="text" class="form-control" id="email">
+				</div>
+			</div>
+		  
+			<div class="form-group row">
+				<label for="phone" class="col-sm-4 col-form-label required">Phone:</label>
+				<div class="col-sm-4">
+					<input type="text" class="form-control" id="phone">
+				</div>
+			</div>
+			
+			<div class="form-group row">
+				<label for="inquiry" class="col-sm-4 required" id="inquiry">Reason for Inquiry:</label>
+				<div class="col-sm-4">
+					<select class="form-control form-control-sm" id="inquiry">
+						<option value="default" selected>Catering</option>
+						<option value="catering">Catering</option>
+						<option value="private">Private Party</option>
+						<option value="feedback">Feedback</option>
+						<option value="other">Other</option>
+					</select>
+				</div>
+			</div>
+			
+			<div class="form-group row">
+				<label for="additionalInfo" class="col-sm-4" id="info">Additional Information:</label>
+				<div class="col-sm-4">
+						<textarea id="info" name="info"></textarea>
+				</div>
+			</div>
+			
+			<div class="form-group row">
+				<label for="visited" class="col-sm-4 col-form-label">Have you been to the restaurant?</label>
+				<div class="col-sm-4" style="padding-left: 12px; padding-top: 7px;">
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="radio" name="visited" id="Y" value="Y">
+						<label class="form-check-label" for="Y">Yes</label>
+					</div>
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="radio" name="visited" id="N" value="N">
+						<label class="form-check-label" for="N">No</label>
+					</div>
+				</div>
+			</div>	
+		  
+			<div class="form-group row">
+				<label for="days" class="col-sm-4 col-form-label required">Best days to contact you:</label>
+				<div class="col-sm-4" style="padding-left: 12px; padding-top: 10px;">
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="checkbox" name="days" id="M" value="M">
+						<label class="form-check-label" for="M">M</label>
+					</div>
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="checkbox" name="days" id="T" value="T">
+						<label class="form-check-label" for="T">T</label>
+					</div>
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="checkbox" name="days" id="W" value="W">
+						<label class="form-check-label" for="W">W</label>
+					</div>
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="checkbox" name="days" id="TH" value="TH">
+						<label class="form-check-label" for="TH">TH</label>
+					</div>
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="checkbox" name="days" id="F" value="F">
+						<label class="form-check-label" for="F">F</label>
+					</div>
+				</div>
+			</div>
+		 
+			<div class="form-group row">
+				<div class= "col-sm-4"> </div>
+				<div class="col-sm-4">
+					<button type="submit" onclick="validate();" class="btn btn-primary">Send Request</button>
+				</div>
+			</div>
+		</form>
+		
+		<footer class="jumbotron">
+			<p>Perennial Pkwy, Shallot Town, AK 12345 
+			<br/>
+			(123)123-1234
+			</p>
+		</footer>
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	</body>
+</html>
